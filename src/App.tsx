@@ -1,7 +1,6 @@
-import { useState } from 'react'
-import { Typography } from '@mui/material'
 import Navbar from './components/navbar/Navbar'
 import Hero from './components/hero/Hero'
+import Categories from './components/category/Categories'
 
 function App() {
  
@@ -9,6 +8,7 @@ function App() {
     <>
  <Navbar/>
  <Hero/>
+ <Categories/>
     </>
   
   )
