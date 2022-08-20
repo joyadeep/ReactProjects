@@ -1,10 +1,15 @@
 import { useState } from 'react'
 import { Typography } from '@mui/material'
+import Navbar from './components/navbar/Navbar'
+import Hero from './components/hero/Hero'
 
 function App() {
  
   return (
-  <Typography variant='h5'>Stat your project Here</Typography>
+    <>
+ <Navbar/>
+ <Hero/>
+    </>
   
   )
 }
