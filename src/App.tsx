@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { Typography } from '@mui/material'
+import Main from './pages/Main'
 
 function App() {
  
   return (
-  <Typography variant='h5'>Start your project Here</Typography>
-  
+    <>
+  <Main/>
+  </>
   )
 }
 
