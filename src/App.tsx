@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { Fab, Typography } from '@mui/material'
+import { AppBar, Fab, Toolbar, Typography } from '@mui/material'
 import Intro from './pages/Intro'
 import Skills from './pages/Skills'
-import { Add, Download, ExpandMore } from '@mui/icons-material'
+import { Add, Download, ExpandMore, Facebook, GitHub, Instagram, LinkedIn } from '@mui/icons-material'
 import Projects from './pages/Projects'
+import Contact from './pages/Contact'
 
 function App() {
   const [page,setPage]=useState(0)
@@ -13,9 +14,10 @@ function App() {
   <Intro/>
   <Skills/>
   <Projects/>
-  <Fab color="primary" size='small' sx={{position:'fixed',bottom:'20px',left:'95%'}}>
+  <Contact/>
+  {/* <Fab color="primary" size='small' sx={{position:'fixed',bottom:'20px',left:'95%'}}>
     <ExpandMore onClick={e=>setPage(page+100)} />
-  </Fab>
+  </Fab> */}
   </>
   
   )

@@ -11,8 +11,8 @@ import mongodb from '../assets/icons/mongodb.svg';
 
 const Skills = () => {
   const icons=[
-    {icon:html,name:'Html'},
-    {icon:css,name:'Css'},
+    {icon:html,name:'HTML5'},
+    {icon:css,name:'CSS3'},
     {icon:js,name:'Javascript'},
     {icon:react,name:'React'},
     {icon:nodejs,name:'Node.js'},

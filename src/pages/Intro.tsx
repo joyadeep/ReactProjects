@@ -20,7 +20,7 @@ const Intro = () => {
            <Box>
            <Typography variant='h1'>Hi,</Typography>
             <Typography variant='h2'>I am</Typography>
-            <Typography variant='h1'>Joy-A-deep</Typography>
+            <Typography  sx={{typography:{sm:'body1',md:'h4',lg:'h1'},fontWeight:'bold'}}>Joy-A-deep</Typography>
             <Box sx={{overflow:'hidden',height:'30px',my:3}}>
             <Box sx={{height:'fit-content',animation:`${animation} 7s infinite ease-in-out alternate`}}>
                 <Typography sx={{ height:'50px',fontSize: '25px', fontWeight: '600'}}>Web</Typography>

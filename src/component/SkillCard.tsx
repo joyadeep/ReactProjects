@@ -12,7 +12,7 @@ const SkillCard:React.FC<Iskills> = ({icon,name}) => {
     <Card sx={{width:'100%',border:'none',boxShadow:'none'}}>
       <CardContent sx={{textAlign:'center'}} >
         <img src={icon} width="70px" height="70px"/>
-        <Typography variant='h5' sx={{color:'black'}}>{name}</Typography>
+        <Typography variant='h5' sx={{color:'black',fontSize:{xs:'16px',sm:'20px'}}}>{name}</Typography>
       </CardContent>
     </Card>
     </Grid>
