@@ -26,7 +26,7 @@ const Contact = () => {
     <Grid container justifyContent='center' alignItems='center' height='fit-content'  >
         <Grid item xs={12} sm={12} md={6} sx={{textAlign:'center'}}><img src={contactimg} width={300} height={300}/></Grid>
         <Grid item xs={12} sm={12} md={6} >
-          <Box sx={{width:'60%', mx:'auto'}}>
+          <Box sx={{width:{xs:'90%',sm:'60%'}, mx:'auto'}}>
           <form onSubmit={handleSubmit}>
             <Stack spacing={2}>
               <Box>
