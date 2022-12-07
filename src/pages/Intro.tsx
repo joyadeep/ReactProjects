@@ -1,6 +1,7 @@
 import { Box, Button, Grid,Typography } from '@mui/material'
 import { keyframes, Keyframes } from '@emotion/react'
 import React from 'react'
+import me from '../assets/images/mehd.png';
 
 const Intro = () => {
 
@@ -38,7 +39,7 @@ const Intro = () => {
         </Grid>
         <Grid item  md={6} sx={{height:'100vh',bgcolor:'white',display:{xs:'hidden',sm:'hidden',md:'block'}}}>
             <Box sx={{bgcolor:'#78B9EF',width:'100%',height:'100%',overflow:'hidden'}} style={{clipPath:' polygon(38% 0, 100% 0%, 100% 100%, 30% 100%, 0% 50%)'}}>
-                <img src='https://joyadeep.github.io/portfolio/static/media/me.5ea9dae1.png' width="100%" height="100%"/>
+                <img src={me} width="100%" height={"100%"} />
             </Box>
         </Grid>
     </Grid>
