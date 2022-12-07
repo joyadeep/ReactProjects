@@ -29,9 +29,11 @@ const Shortner = () => {
         flexDirection: "column",
         justifyContent: "center",
         px: {xs:1,sm:1,md:3},
-        background:`url(${blob})`,
-        backgroundRepeat:'no-repeat',
-        backgroundPosition:'top right'
+        background:{
+          xs:'none',
+          sm:'none',
+          md:`url(${blob}) no-repeat top right`
+        }
       }}
     >
         {/* <img src={blob}/> */}
