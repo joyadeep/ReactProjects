@@ -16,11 +16,11 @@ const Intro = () => {
   return (
    <Box sx={{height:'100vh',bgcolor:'white',color:'black',overflow:'hidden'}}>
     <Grid container>
-        <Grid item xs={12} sm={12} md={6} sx={{justifyContent:{xs:'flex-start',sm:'center'},pl:{xs:'20px',sm:'0'},width:'100vw',alignItems:'center',display:'flex',height:'100vh'}}>
+        <Grid item xs={12} sm={12} md={6} sx={{justifyContent:'flex-start',pl:{xs:'20px',sm:2,md:2,lg:2},width:'100vw',alignItems:'center',display:'flex',height:'100vh'}}>
            <Box>
            <Typography variant='h2' >Hi,</Typography>
             <Typography variant='h2' >I am</Typography>
-            <Typography  sx={{typography:{xs:'h2',sm:'h1',md:'h1',lg:'h1'}}} style={{fontWeight:'500'}}>Joy-A-deep</Typography>
+            <Typography color="secondary"  sx={{typography:{xs:'h3',sm:'h2',md:'h1',lg:'h1'}}} style={{fontWeight:'600'}}>Joy-A-deep</Typography>
             <Box sx={{overflow:'hidden',height:'30px',my:3}}>
             <Box sx={{height:'fit-content',animation:`${animation} 7s infinite ease-in-out alternate`}}>
                 <Typography sx={{ height:'50px',fontSize: '25px'}}>Web</Typography>
