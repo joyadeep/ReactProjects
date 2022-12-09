@@ -1,27 +1,54 @@
 import React, { useRef, useState } from "react";
-import short from '../services/shortUrl'
 import {
   Box,
   Typography,
   TextField,
   Button,
   InputAdornment,
+  Modal,
+  Paper,
+  IconButton,
+  Snackbar,
+  Alert
 } from "@mui/material";
-import { Search, LinkRounded } from "@mui/icons-material";
+import { LinkRounded,ContentPasteRounded } from "@mui/icons-material";
 import Typewriter from "typewriter-effect";
 import blob from '../assets/blob.svg'
+import axois from 'axios';
 const Shortner = () => {
 
-  const[url,setUrl]:any=useState("")
-    // const urlRef:any=useRef(null)
+  const[url,setUrl]=useState("")
+  const[isLoading,setIsLoading]=useState(false);
+  const[res,setRes]=useState("");
+  const[isOpen,setIsOpen]=useState(false);
+  const[openToast,setOpenToast]=useState(false);
     const handleClick=(e:any)=>{
-      e.preventDefault();
-        console.log(url);
-        const res=short(url);
-        console.log(res)
+      setIsLoading(true);
+      const options = {
+        method: 'POST',
+        url: 'https://url-shortener23.p.rapidapi.com/shorten',
+        headers: {
+          'content-type': 'application/json',
+          'X-RapidAPI-Key': '1b426aca48mshdbabd82da60fca4p1894bbjsndcf818f12ed0',
+          'X-RapidAPI-Host': 'url-shortener23.p.rapidapi.com'
+        },
+        data: {"url": `${url}` }
+      };
+      
+      axois.request(options).then(function (response) {
+        console.log(response.data);
+        setRes(response.data.short_url)
+        setIsOpen(true)
+      }).catch(function (error) {
+        console.error(error);
+        setRes(error)
+      });
+
+setIsLoading(false)
     }
 
   return (
+    <>
     <Box
       sx={{
         height: "100vh",
@@ -36,7 +63,6 @@ const Shortner = () => {
         }
       }}
     >
-        {/* <img src={blob}/> */}
       <Typography sx={{fontSize:{xs:'24px',sm:'24px',md:'60px'}}}>A simple link</Typography>
       <Typography sx={{fontSize:{xs:'24px',sm:'24px',md:'60px'}}}>but a powerful tool</Typography>
       <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
@@ -52,15 +78,14 @@ const Shortner = () => {
           />
         </Typography>
       </Box>
-      <Box sx={{ width: {xs:'100%',sm:'100%',md:'50%',lg:'40%'}, textJustify: "inter-word", mt: 3 }}>
+      <Box sx={{ width: {xs:'100%',sm:'100%',md:'50%',lg:'50%'}, textJustify: "inter-word", mt: 3 }}>
+      <Typography  variant="body1"> Our tool allows you to seamlessly track your audience with simple and</Typography>
         <Typography  variant="body1">
-          Our tool allows you to seamlessly track your audience with simple and
           easy-to-remember yet powerful links and provide your customers a
           unique tailored experience.
         </Typography>
       </Box>
       <Box sx={{ mt: 3,display:'flex',alignItems:'center',gap:3 }}>
-        {/* <TextField   /> */}
         <TextField
         name="url"
         type="url"
@@ -84,18 +109,52 @@ const Shortner = () => {
           variant="outlined"
         />
         <Button onClick={handleClick} sx={{textTransform:'none',color:'white',bgcolor:'black',px:{xs:1,sm:2,md:3},"&:hover":{color:'white',bgcolor:'black'}}}>
-            <Typography  sx={{
-              fontSize:{
-                xs:'16px',
-                sm:'20px',
-                md:'20px'
-              },
-              whiteSpace:'nowrap'
-              
-            }}>Try Now</Typography>
+            {
+              isLoading?<Typography>Loading</Typography>:<Typography  sx={{
+                fontSize:{
+                  xs:'16px',
+                  sm:'20px',
+                  md:'20px'
+                },
+                whiteSpace:'nowrap'    
+              }}>Try Now</Typography>
+            }
         </Button>
       </Box>
     </Box>
+    <Modal open={isOpen} onClose={()=>{setIsOpen(false)}} sx={{height:'100%',display:'flex',alignItems:'center',justifyContent:'center'}}>
+      
+            <Paper sx={{width:"50%",p:3}}>
+            <Typography variant='h6'>Your URL is ready</Typography>
+            <Box sx={{display:'flex',alignItems:'center',width:'100%'}}>
+            <TextField
+            size="medium"
+            aria-readonly
+           fullWidth
+
+          value={res}
+         />
+           <IconButton onClick={()=>{
+            navigator.clipboard.writeText(res);
+            setOpenToast(true);
+            setIsOpen(false);
+           }}>
+            <ContentPasteRounded/>
+           </IconButton>
+            </Box>
+            </Paper>
+    </Modal>
+    <Snackbar open={openToast}  anchorOrigin={{
+        vertical: "top",
+        horizontal: "right"
+     }} onClose={()=>{setOpenToast(false)}} autoHideDuration={3000}>
+      <Alert severity="success">
+           <Typography variant='body1' >
+            link copied successfully !
+           </Typography>
+      </Alert>
+    </Snackbar>
+    </>
   );
 };
 
