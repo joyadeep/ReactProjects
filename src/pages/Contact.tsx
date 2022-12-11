@@ -20,7 +20,7 @@ const Contact = () => {
     }
   )
   return (
-   <Box sx={{width:'100%',height:'100vh',bgcolor:'white',color:'black',py:2,oveflow:'hidden'}}>
+   <Box id='contact' sx={{width:'100%',height:'100vh',bgcolor:'white',color:'black',py:2,oveflow:'hidden'}}>
     <Typography align="center" variant='h4' fontWeight="500">Let's Talk</Typography>
     <Box sx={{display:'flex', justifyContent:'center', alignItems:'center',height:'90%'}}>
     <Grid container justifyContent='center' alignItems='center' height='fit-content'  >

@@ -31,7 +31,8 @@ const Intro = () => {
             </Box>
             <Typography variant="h4" my={6}>Lets work together</Typography>
             <Box sx={{display:'flex',gap:3}}>
-               <Button variant='contained' disableElevation size="small" sx={{textTransform:'none',fontWeight:'500',fontSize:'20px'}}>Hire me</Button>
+                <a style={{textDecoration:'none'}} href="#contact">
+               <Button variant='contained' disableElevation size="small" sx={{textTransform:'none',fontWeight:'500',fontSize:'20px'}}>Hire me</Button></a>
                <a style={{textDecoration:'none'}} href="https://drive.google.com/file/d/1Wu_UPsA17D3hA0bra46P32XGNhNIXQod/view?usp=sharing" target="_blank"> <Button variant='outlined' size='small' sx={{textTransform:'none',fontWeight:'500',fontSize:'20px'}}>Download CV</Button></a>
             </Box>
 
