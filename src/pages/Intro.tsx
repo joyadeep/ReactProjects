@@ -24,12 +24,12 @@ const Intro = () => {
             <Typography color="secondary"  sx={{typography:{xs:'h3',sm:'h2',md:'h1',lg:'h1'}}} style={{fontWeight:'600'}}>Joy-A-deep</Typography>
             <Box sx={{overflow:'hidden',height:'30px',my:3}}>
             <Box sx={{height:'fit-content',animation:`${animation} 7s infinite ease-in-out alternate`}}>
-                <Typography sx={{ height:'50px',fontSize: '25px'}}>Web</Typography>
-                <Typography sx={{ height:'50px',fontSize: '25px'}}>React</Typography>
-                <Typography sx={{ height:'50px',fontSize: '25px'}}>Technophile</Typography>  
+                <Typography sx={{ height:'50px',fontSize: '25px',fontWeight:'bold'}}>Web</Typography>
+                <Typography sx={{ height:'50px',fontSize: '25px',fontWeight:'bold'}}>React</Typography>
+                <Typography sx={{ height:'50px',fontSize: '25px',fontWeight:'bold'}}>Technophile</Typography>  
             </Box>
             </Box>
-            <Typography variant="h4" my={6}>Lets work together</Typography>
+            <Typography variant="h6" my={6}>Build your dream projects.</Typography>
             <Box sx={{display:'flex',gap:3}}>
                 <a style={{textDecoration:'none'}} href="#contact">
                <Button variant='contained' disableElevation size="small" sx={{textTransform:'none',fontWeight:'500',fontSize:'20px'}}>Hire me</Button></a>
