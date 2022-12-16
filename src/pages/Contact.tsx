@@ -4,7 +4,6 @@ import React, { useRef, useState } from 'react'
 import contactimg from '../assets/images/contact.png'
 import contactSchema from '../schema';
 import emailjs from '@emailjs/browser';
-import Toast from '../component/Toast';
 
 interface Iformvalues {
   fullname:string
