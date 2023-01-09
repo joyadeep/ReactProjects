@@ -5,6 +5,7 @@ import Skills from './pages/Skills'
 import { Add, Download, ExpandMore, Facebook, GitHub, Instagram, LinkedIn } from '@mui/icons-material'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import Experience from './pages/Experience'
 
 function App() {
   const [page,setPage]=useState(0)
@@ -13,6 +14,7 @@ function App() {
   <>
   <Intro/>
   <Skills/>
+  <Experience/>
   <Projects/>
   <Contact/>
   {/* <Fab color="primary" size='small' sx={{position:'fixed',bottom:'20px',left:'95%'}}>
