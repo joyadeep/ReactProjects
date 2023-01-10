@@ -8,7 +8,7 @@ const Experience = () => {
     {
       id:1,
       title:'Fellow React Developer',
-      duration:'Aug 2022 - Nov 2022',
+      duration:'Mar 2022 - Aug 2022',
       image:deerhold,
       organization:'Deerhold Nepal'
     }]
