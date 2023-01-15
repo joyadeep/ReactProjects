@@ -1,20 +1,29 @@
 import { useState } from 'react'
-import { Typography } from '@mui/material'
-import {Routes,Route} from 'react-router-dom'
+import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import Auth from './pages/Auth'
+import ForgotPW from './pages/ForgotPW'
 import Home from './pages/Home'
-import Register from './pages/Register'
+
+const router=createBrowserRouter([
+  {
+    path:'/',
+    element:<Home/>
+  },
+  {
+    path:'/auth',
+    element:<Auth/>
+  },
+  {
+    path:'/forgot',
+    element:<ForgotPW/>
+  }
+])
+
 function App() {
  
   return (
-<>
-<Routes>
-  <Route path='/' element={<Home/>} />
-  <Route path='/login' element={<Auth/>}/>
-  <Route path='/register' element={<Register/>}/>
-</Routes>
-</>
-  
+    <RouterProvider router={router} ></RouterProvider>
+
   )
 }
 
