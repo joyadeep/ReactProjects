@@ -1,0 +1,13 @@
+.sidebar{
+    text-decoration: none;
+    color: #8a959e;
+    padding: 10px;
+    display:flex;
+    column-gap: 10px;
+    align-items: center;
+    border-radius: 7px;
+}
+.sidebar:hover{
+    background-color: #dedede;
+    color: black;
+}

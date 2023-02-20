@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import { Typography } from '@mui/material'
-
+import {Routes,Route} from 'react-router-dom'
+import Sidebar from './components/Sidebar'
+import Layout from './Layout/Layout'
 function App() {
  
   return (
-  <Typography variant='h5'>Stat your project Here</Typography>
-  
+    <Layout>
+   <Typography>Hello Wrodl</Typography>
+   </Layout>
   )
 }
 
