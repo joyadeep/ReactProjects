@@ -9,9 +9,11 @@ const Layout = ({children}:any) => {
                 <Grid item xs={2}>
                     <Sidebar />
                 </Grid>
-                <Grid item xs={10} sx={{pl:1,pt:1}}>
-                    <Nav/>
+                <Grid item xs={10} sx={{pl:1,pt:1,overflow:'hidden',height:'100vh'}}>
+                   <Box sx={{overflowY:'auto',height:'100%'}}>
+                   <Nav/>
                     {children}
+                   </Box>
                 </Grid>
             </Grid>
         </Box>
