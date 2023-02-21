@@ -7,7 +7,7 @@ import {Widgets,Gamepad, Logout} from '@mui/icons-material'
 const Sidebar = () => {
   return (
     <Box sx={{height:'100vh',px:'5px',pt:'5px',borderRight:'2px solid #f4f4f4',display:'flex',flexDirection:'column'}}>
-        <Box>
+        <Box sx={{textAlign:'center'}}>
             <Typography variant='h5'>App Store</Typography>
         </Box>
         <Box mt={3} sx={{display:'flex',flexDirection:'column',rowGap:1,flexGrow:1}}>
