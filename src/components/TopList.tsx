@@ -12,7 +12,7 @@ const TopList = () => {
    </Box>
     <Box sx={{position:'relative',top:'90px',width:'fit-content'}}><IconButton sx={{bgcolor:'white',textAlign:'center',boxShadow:'5px 5px 10px gray'}}><ArrowBackIos sx={{pl:1}}/></IconButton></Box>
     <Box sx={{position:'relative',top:'50px',left:'98%',width:'fit-content'}} ><IconButton sx={{bgcolor:'white',textAlign:'center',boxShadow:'-5px -5px 10px gray',transform:'rotate(180deg)'}} ><ArrowBackIos sx={{pl:1}}/></IconButton></Box>
-   <Box sx={{display:'flex',overflowY:'auto',columnGap:1,mt:'-70px'}}>
+   <Box sx={{display:'flex',overflowY:'auto',columnGap:1,mt:'-70px',pl:2,pr:2}}>
    <AppCard/>
    <AppCard/>
    <AppCard/>

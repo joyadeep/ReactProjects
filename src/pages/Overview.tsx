@@ -1,5 +1,6 @@
 import { Box, Button, Grid, Paper, Typography } from '@mui/material'
 import React from 'react'
+import PaidCard from '../components/PaidCard'
 import TopList from '../components/TopList'
 import Trending from '../components/Trending'
 
@@ -16,7 +17,7 @@ const Overview = () => {
                         <Typography variant="h6" sx={{color:'white'}} >Super Mario : Bros</Typography>
                         <Typography variant="body2" sx={{color:'white'}}>Save the world from evil with Mario Bros</Typography>
                     </Box>
-                    <Button variant="contained" disableElevation size='small' sx={{textTransform:'none',borderRadius:'15px',px:2,fontSize:'16px',fontWeight:'bold',letterSpacing:'-1px'}} >Download</Button>
+                    <Button variant="contained" disableElevation size='small' sx={{bgcolor:'#419cff',textTransform:'none',borderRadius:'20px',px:3,fontSize:'16px',fontWeight:'500',letterSpacing:'0'}} >Download</Button>
                     </Box>
                 </Paper>
 
@@ -26,6 +27,7 @@ const Overview = () => {
             </Grid>
             <Grid item xs={4}>
                 <Trending/>
+                <PaidCard/>
             </Grid>
         </Grid>
     </Box>
