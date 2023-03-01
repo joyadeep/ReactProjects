@@ -1,12 +1,13 @@
 import { Box, Button, Paper, Typography,Avatar } from '@mui/material'
 import React from 'react'
-
+import {useNavigate} from 'react-router-dom'
 const Trending = () => {
+    const navigate=useNavigate();
   return (
     <Paper elevation={0} sx={{pr:3,boxShadow:'5px 10px 20px #f1f1f1',pb:2,pl:1}}>
         <Box sx={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
             <Typography variant='h5' sx={{fontWeight:'bold'}}>Trending</Typography>
-            <Button sx={{p:0,textTransform:'none'}}><Typography color="#6ab1fd">see all</Typography></Button>
+            <Button sx={{p:0,textTransform:'none'}} onClick={()=>{navigate("/trending")}} ><Typography color="#6ab1fd">see all</Typography></Button>
         </Box>
         <Box sx={{display:'flex',alignItems:'center',mt:2}}>
         <Avatar sx={{bgcolor:'blue',borderRadius:'10px'}} variant="rounded" >M</Avatar>
