@@ -1,4 +1,4 @@
-import { ArrowForwardRounded } from '@mui/icons-material'
+import { ArrowForwardRounded, BookmarkRounded } from '@mui/icons-material'
 import { Avatar, Box, Button, Container, Grid, Rating, Typography } from '@mui/material'
 import React from 'react'
 import DeveloperDetails from '../components/DeveloperDetails'
@@ -9,8 +9,7 @@ const AppDetails = () => {
     <Box>
         <Box sx={{display:'flex',alignItems:'flex-end',pb:3,height:'100vh',bgcolor:'red',background:` linear-gradient(to right,
       rgba(0, 0, 0, 0.4), 
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.8)
+      rgba(0, 0, 0, 0)
     ), url("https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")`,backgroundSize:'cover',backgroundPosition:'right'}}>
             <Container>
             <Typography variant='h3' color="white" sx={{fontWeight:'500',mb:2}}>Clash of Clans</Typography>
@@ -27,6 +26,7 @@ const AppDetails = () => {
             </Box>
         </Box>
             <Button variant="contained" size='large' disableElevation sx={{textTransform:'none',fontWeight:'500',mt:2,width:'200px'}}>Install</Button>
+            <Button startIcon={<BookmarkRounded/>}  size='large' disableElevation sx={{textTransform:'none',fontWeight:'500',mt:2,width:'200px'}}>Add to wishlist</Button>
             </Container>
         </Box>
 

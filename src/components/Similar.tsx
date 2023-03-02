@@ -8,7 +8,7 @@ const Similar = () => {
         <Typography variant='h5' sx={{display:'flex',alignItems:'center'}} >Similar Apps <ArrowForwardRounded sx={{ml:1}}/> </Typography>
         {
             [1,2,3,4].map(()=>(
-                <Paper elevation={0}  sx={{display:'flex',alignItems:'center',columnGap:2,cursor:'pointer','&:hover':{bgcolor:'#e9e9e9'},p:1}}>
+                <Paper elevation={0}  sx={{display:'flex',alignItems:'center',columnGap:2,cursor:'pointer','&:hover':{bgcolor:'#e9e9e9'},p:1,mt:2}}>
             <Avatar variant='rounded' sx={{width:64,height:64,boxShadow:'0px 0px 10px #eeeeee',bgcolor:'black'}} >M</Avatar>
             <Box>
                 <Typography variant='body1'>Facebook Lite</Typography>
