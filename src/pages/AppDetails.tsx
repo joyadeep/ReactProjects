@@ -1,6 +1,8 @@
 import { ArrowForwardRounded } from '@mui/icons-material'
 import { Avatar, Box, Button, Container, Grid, Rating, Typography } from '@mui/material'
 import React from 'react'
+import DeveloperDetails from '../components/DeveloperDetails'
+import Similar from '../components/Similar'
 
 const AppDetails = () => {
   return (
@@ -30,7 +32,7 @@ const AppDetails = () => {
 
         <Container sx={{mt:4}}>
           <Grid container columnSpacing={4}>
-            <Grid item xs={7} >
+            <Grid item xs={8} >
             <Typography variant="h5" sx={{display:'flex',alignItems:'center'}}  >About this Game <ArrowForwardRounded sx={{ml:1}}/></Typography>
             <Typography mt={1}>
             Join millions of players worldwide as you build your village, raise a clan, and compete in epic Clan Wars!
@@ -41,8 +43,9 @@ Welcome to Skeleton Park, a new Clan Capital District with indestructible barrie
             <Typography variant="h5" mt={5} >What's New</Typography>
             <Typography mt={1} >Various minor bugs fixed</Typography>
             </Grid>
-            <Grid item xs={5} >
-                <Typography>developer contact and simimar apps</Typography>
+            <Grid item xs={4} >
+                <DeveloperDetails/>
+                <Similar/>
             </Grid>
           </Grid>
         </Container>

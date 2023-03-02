@@ -1,20 +1,21 @@
-import { Avatar, Box, Grid, Rating, Typography } from '@mui/material'
+import { Avatar, Box, Grid, Paper, Rating, Typography } from '@mui/material'
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom'
 interface Iprops{
     title:string
 }
 
 const TopApps:React.FC<Iprops> = ({title}) => {
   const item=[1,2,3,4,5,6,7,8,9]
+  const navigate=useNavigate();
     return (
     <Box mt={5}>
         <Typography variant='h5' sx={{p:0,m:0,letterSpacing:'-1px'}} >{title}</Typography>
-        <Grid container sx={{mt:0,height:'400px'}} direction="column" spacing={3}>
+        <Grid container sx={{mt:0,height:'400px'}} direction="column" spacing={2}>
 {
     item.map((item)=>(
-        <Grid item xs={4} key={item} sx={{"& hover":"bgcolor:'red'"}}>
-        <Box sx={{display:'flex',alignItems:'center',columnGap:2}}>
+        <Grid item xs={4} key={item}  >
+        <Paper elevation={0} onClick={()=>navigate("/detail")} sx={{display:'flex',alignItems:'center',columnGap:2,cursor:'pointer','&:hover':{bgcolor:'#e9e9e9'},p:1}}>
             <Typography>{item}</Typography>
             <Avatar variant='rounded' sx={{width:64,height:64,boxShadow:'0px 0px 10px #eeeeee',bgcolor:'black'}} >M</Avatar>
             <Box>
@@ -22,7 +23,7 @@ const TopApps:React.FC<Iprops> = ({title}) => {
                 <Typography variant="caption" sx={{color:'gray'}}>Social</Typography>
                 <Typography variant="body2" sx={{display:'flex',alignItems:'center',color:'gray'}}>4.2 <Rating sx={{fontSize:'12px',color:'gray',ml:'2px'}} defaultValue={0.5} max={1} /></Typography>
             </Box>
-        </Box>
+        </Paper>
     </Grid>
     ))
 }
