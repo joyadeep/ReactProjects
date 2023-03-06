@@ -9,6 +9,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import SwiperNavButtons from './SwiperNavButtons';
 
 const TopList = () => {
   const navigate=useNavigate();
@@ -23,7 +24,6 @@ const TopList = () => {
       modules={[Navigation]}
       spaceBetween={70}
       slidesPerView={4}
-      navigation
     >
       {
         [1,2,3,4,5,6,7,8,9].map((index)=>(
@@ -35,9 +35,8 @@ const TopList = () => {
       {/* avoiding last item to view half only */}
       <SwiperSlide>
       </SwiperSlide>
-      
-      
-      </Swiper>
+      <SwiperNavButtons/>
+       </Swiper>
 
 
 
