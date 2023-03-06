@@ -18,7 +18,7 @@ const ExpCard:React.FC<Iexp> = ({item}) => {
     <Grid item md={6} sx={{border:0,boxShadow:'0'}} >
     <Card sx={{width:'100%',border:'none',boxShadow:'none'}}>
       <CardContent sx={{display:'flex',columnGap:2}} >
-        <img src={item.image} width={100} height={100} />
+        <img src={item.image} width={100} height={100} style={{objectFit:'contain'}} />
        <Box sx={{my:'auto'}}>
        <Typography variant='h5' sx={{color:'black',fontWeight:'bold',fontSize:{xs:'16px',sm:'20px'}}}>{item.title}</Typography>
        <Typography variant='h6' sx={{color:'black',fontSize:{xs:'16px',sm:'20px'}}}>{item.organization}</Typography>
