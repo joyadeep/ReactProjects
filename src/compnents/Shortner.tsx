@@ -9,14 +9,14 @@ import {
   Paper,
   IconButton,
   Snackbar,
-  Alert
+  Alert,
+  CircularProgress
 } from "@mui/material";
 import { LinkRounded,ContentPasteRounded } from "@mui/icons-material";
 import Typewriter from "typewriter-effect";
 import blob from '../assets/blob.svg'
 import axois from 'axios';
 const Shortner = () => {
-
   const[url,setUrl]=useState("")
   const[isLoading,setIsLoading]=useState(false);
   const[res,setRes]=useState("");
@@ -67,7 +67,7 @@ setIsLoading(false)
       <Typography sx={{fontSize:{xs:'24px',sm:'24px',md:'60px'}}}>but a powerful tool</Typography>
       <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
         <Typography sx={{fontSize:{xs:'24px',sm:'24px',md:'60px'}}}>for</Typography>
-        <Typography sx={{fontSize:{xs:'24px',sm:'24px',md:'60px'},color: "#eb1fbb", fontWeight: "600"}} >
+        <Typography component={'div'}  sx={{fontSize:{xs:'24px',sm:'24px',md:'60px'},color: "#eb1fbb", fontWeight: "600"}} >
           <Typewriter
             options={{
               strings: ["Youtube", "Facebook", "Instagram","and Everything !"],
@@ -94,7 +94,8 @@ setIsLoading(false)
           sx={{
             width: {xs:'80%',sm:'40%',md:'40%'},
             border: "none",
-            boxShadow: "8px 5px 5px #eaeaea ",
+            borderRadius:"9px",
+            boxShadow: "0px 0px 10px #eaeaea ",
             bgcolor: "white",
             "& fieldset": { border: "none" },
           }}
@@ -108,9 +109,9 @@ setIsLoading(false)
           }}
           variant="outlined"
         />
-        <Button onClick={handleClick} sx={{textTransform:'none',color:'white',bgcolor:'black',px:{xs:1,sm:2,md:3},"&:hover":{color:'white',bgcolor:'black'}}}>
+        <Button size="large" disabled={isLoading} onClick={handleClick} sx={{textTransform:'none',color:'white',bgcolor:'black',px:{xs:1,sm:2,md:3},"&:hover":{color:'white',bgcolor:'black'}}}>
             {
-              isLoading?<Typography>Loading</Typography>:<Typography  sx={{
+              isLoading?<CircularProgress size={'30px'} />:<Typography  sx={{
                 fontSize:{
                   xs:'16px',
                   sm:'20px',
@@ -123,7 +124,6 @@ setIsLoading(false)
       </Box>
     </Box>
     <Modal open={isOpen} onClose={()=>{setIsOpen(false)}} sx={{height:'100%',display:'flex',alignItems:'center',justifyContent:'center'}}>
-      
             <Paper sx={{width:"50%",p:3}}>
             <Typography variant='h6'>Your URL is ready</Typography>
             <Box sx={{display:'flex',alignItems:'center',width:'100%'}}>
@@ -131,7 +131,6 @@ setIsLoading(false)
             size="medium"
             aria-readonly
            fullWidth
-
           value={res}
          />
            <IconButton onClick={()=>{
