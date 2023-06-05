@@ -1,6 +1,8 @@
 import React from 'react'
 import road from '../assets/images/road.jpg'
 import PopularDestination from '../components/PopularDestination'
+import RecentTrips from '../components/RecentTrips'
+import Footer from '../components/Footer'
 type Props = {}
 
 const Home = (props: Props) => {
@@ -14,6 +16,8 @@ const Home = (props: Props) => {
       </button>
     </main>
     <PopularDestination/>
+    <RecentTrips/>
+    <Footer/>
     </>
   )
 }

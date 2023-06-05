@@ -4,7 +4,7 @@ import {HomeIcon} from '@heroicons/react/24/outline'
 
 type Props = {
     title:string,
-    icon:any
+    icon?:any
     // icon:React.ComponentType<React.SVGProps<SVGSVGElement>>
 }
 
