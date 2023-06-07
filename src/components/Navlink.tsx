@@ -4,13 +4,14 @@ import {HomeIcon} from '@heroicons/react/24/outline'
 
 type Props = {
     title:string,
-    icon?:any
+    icon?:any,
+    link:string
     // icon:React.ComponentType<React.SVGProps<SVGSVGElement>>
 }
 
-const Navlink = ({title,icon}: Props) => {
+const Navlink = ({title,icon,link}: Props) => {
   return (
-    <NavLink to="" className="px-2 py-1 rounded-md flex flex-row items-center gap-1  hover:bg-slate-200  ">
+    <NavLink to={link} className="px-2 py-1 rounded-md flex flex-row items-center gap-1  hover:bg-slate-200  ">
         {/* <HomeIcon className='w-6 h-6' /> */}
         {icon}
         <span className='text-lg text-slate-800 '>{title}</span>

@@ -1,15 +1,28 @@
 import React from 'react'
 
-type Props = {}
+type Props = {
+  footer: {
+    id:number,
+    title:string,
+    links:{
+      id:number,
+      title:string,
+      link:string
+    }[]
+  }
+}
 
-const FooterCard = (props: Props) => {
+const FooterCard = ({footer}: Props) => {
+  console.log("footerCard =",footer)
   return (
     <div>
-        <h4 className='font-semibold text-xl'>Project</h4>
-        <p className='text-sm'>Changelog</p>
-        <p className='text-sm'>Status</p>
-        <p className='text-sm'>License</p>
-        <p className='text-sm'>All Version</p>
+        <h4 className='font-semibold text-xl'>{footer.title}</h4>
+        {
+          footer.links.map((link)=>(
+            <p className='text-sm w-fit cursor-pointer hover:underline hover:underline-offset-4 '>{link.title}</p>
+          ))
+        }
+       
 
     </div>
   )

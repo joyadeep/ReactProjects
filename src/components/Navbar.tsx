@@ -9,10 +9,10 @@ const Navbar = (props: Props) => {
         <nav className='bg-white  py-2 px-5 rounded-xl shadow-md flex flex-row items-center justify-between border  '>
         <div className='text-4xl font-bold tracking-tight '>Trippy</div>
         <div className='flex gap-3'>
-          <Navlink title='Home' />
-          <Navlink title='About' />
-          <Navlink title='Service' />
-          <Navlink title='Contact' />
+          <Navlink title='Home' link='/' />
+          <Navlink title='About' link='/about' />
+          <Navlink title='Service' link='/service' />
+          <Navlink title='Contact' link='/contact' />
           <button className='text-lg text-white px-4 rounded-md bg-black' >Signup</button>
         </div>
     </nav>

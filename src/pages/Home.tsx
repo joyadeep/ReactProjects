@@ -17,7 +17,6 @@ const Home = (props: Props) => {
     </main>
     <PopularDestination/>
     <RecentTrips/>
-    <Footer/>
     </>
   )
 }
