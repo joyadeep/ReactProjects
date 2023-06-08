@@ -5,8 +5,8 @@ type Props = {}
 
 const PlaceDetails = (props: Props) => {
   return (
-    <div className='flex gap-5 justify-between mb-10 w-full even:flex-row-reverse'>
-        <div className='w-1/2'>
+    <div className='flex flex-col lg:flex-row gap-5 justify-between mb-10 w-full even:flex-col-reverse lg:even:flex-row-reverse '>
+        <div className=' w-full lg:w-1/2 '>
             <h1 className='text-2xl font-semibold font-poppins'>Taal volcano,Batangas</h1>
             <p className='text-slate-500 text-justify '>
                 one of the most iconic view in luzon Mt. taal booasts a volcanic inside 
@@ -15,9 +15,9 @@ const PlaceDetails = (props: Props) => {
                 and then unwind with some bulalo before heading back home !
             </p>
         </div>
-        <div className='w-1/2 flex gap-2'>
-            <img src={japan} alt="" className='w-64 h-80 translate-y-5 rounded-md object-cover shadow-2xl shadow-slate-400 '  />
-            <img src={highway} alt="" className='w-64 h-80  rounded-md object-cover shadow-2xl shadow-slate-400' />
+        <div className=' w-full lg:w-1/2 flex gap-1 lg:gap-2  '>
+            <img src={japan} alt="" className='w-1/2 lg:w-64 h-80 translate-y-5 rounded-md object-cover shadow-2xl shadow-slate-400 '  />
+            <img src={highway} alt="" className='w-1/2 lg:w-64 h-80  rounded-md object-cover shadow-2xl shadow-slate-400' />
         </div>
     </div>
   )

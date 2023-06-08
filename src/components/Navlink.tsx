@@ -11,10 +11,13 @@ type Props = {
 
 const Navlink = ({title,icon,link}: Props) => {
   return (
-    <NavLink to={link} className="px-2 py-1 rounded-md flex flex-row items-center gap-1  hover:bg-slate-200  ">
+    <NavLink to={link} 
+    className=" text-lg px-2 py-1 rounded-md flex flex-row items-center gap-1 w-fit  hover:bg-slate-200  "
+    >
         {/* <HomeIcon className='w-6 h-6' /> */}
         {icon}
-        <span className='text-lg text-slate-800 '>{title}</span>
+        {title}
+        {/* <span className='text-lg text-slate-800 '>{title}</span> */}
     </NavLink>
   )
 }

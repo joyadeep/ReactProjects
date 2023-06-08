@@ -28,7 +28,7 @@ const About = (props: Props) => {
       <div className='flex items-center justify-center ' style={{height:'70vh',backgroundImage:`url(${japan})`,backgroundSize:'cover',backgroundPositionY:'center'}} >
         <h1 className='text-6xl font-bold text-white ' >About</h1>
       </div>
-      <div className='px-20 mt-10 flex flex-col gap-10'>
+      <div className='px-5 lg:px-20 mt-10 flex flex-col gap-10'>
       {/* <AboutCard title='Our Mission' description='our mission' /> */}
       {
         about.map((item)=>(

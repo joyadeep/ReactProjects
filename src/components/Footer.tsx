@@ -8,9 +8,8 @@ import data from '../data/footer.json'
 type Props = {}
 
 const Footer = (props: Props) => {
-  // console.log("footer data =",data)
   return (
-    <div className='bg-black text-white px-20 py-10' >
+    <div className='bg-black text-white px-5 lg:px-20 py-10' >
      
         <div className='flex justify-between items-center'>
             <div>
@@ -24,7 +23,8 @@ const Footer = (props: Props) => {
                 <FaTiktok size={22} className='cursor-pointer' />
             </div>
         </div>
-        <div className='mt-7 flex justify-between'>
+        <div className='mt-7 flex justify-between flex-wrap gap-y-4 text-center lg:text-left '>
+        {/* <div className='mt-7  grid grid-cols-4   '> */}
           {
             data.map((footer)=>(
               <FooterCard key={footer.id} footer={footer} />
