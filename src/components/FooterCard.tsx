@@ -18,7 +18,7 @@ const FooterCard = ({footer}: Props) => {
         <h4 className='font-semibold text-xl'>{footer.title}</h4>
         {
           footer.links.map((link)=>(
-            <p className='text-sm w-fit mx-auto lg:mx-0 cursor-pointer hover:underline hover:underline-offset-4 '>{link.title}</p>
+            <p key={link.id} className='text-sm w-fit mx-auto lg:mx-0 cursor-pointer hover:underline hover:underline-offset-4 '>{link.title}</p>
           ))
         }
        
