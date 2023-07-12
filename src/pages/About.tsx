@@ -5,7 +5,7 @@ type Props = {}
 
 const About = (props: Props) => {
   return (
-    <div className='px-20 h-fit'>
+    <div className='px-5 md:px-20 h-fit'>
         <AboutMe/>
     </div>
   )

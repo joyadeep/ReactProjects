@@ -9,16 +9,16 @@ type Props = {}
 
 const Home:React.FC = (props: Props) => {
   return (
-    <div className='w-full h-screen px-20 flex  flex-col gap-2 justify-center items-center '>
+    <div className='w-full h-screen px-5 md:px-20 flex  flex-col gap-2 justify-center items-center '>
         <div className='flex gap-5'>
             <div className='relative w-20'>
                 <img src={figma} className=' absolute top-10 left-5 animate-rotation2 drop-shadow-xl w-10 h-10' alt="" />
-                <img src={node} className=' animate-rotation duration-500 drop-shadow-xl absolute bottom-0 -left-10  w-10 h-10' alt="" />
+                <img src={node} className=' animate-rotation duration-500 drop-shadow-xl absolute bottom-0 -left-5 md:-left-10  w-10 h-10' alt="" />
             </div>
             <img src={me} alt="" className='w-48 h-48 object-cover rounded-full shadow-xl ' />
             <div className='relative'>
             <img src={react} className=' animate-rotation3 drop-shadow-xl w-10 h-10' alt="" />
-            <img src={tailwind} className=' animate-rotation4 drop-shadow-xl duration-500 delay-1000 absolute bottom-10 -right-10  w-10 h-10' alt="" />
+            <img src={tailwind} className=' animate-rotation4 drop-shadow-xl duration-500 delay-1000 absolute bottom-10 -right-5 md:-right-10  w-10 h-10' alt="" />
             </div>
         </div>
         <div className=' text-center flex flex-col gap-3 pt-4'>
