@@ -1,5 +1,9 @@
 import Navbar from "./components/Navbar"
+import About from "./pages/About"
+import Contact from "./pages/Contact"
 import Home from "./pages/Home"
+import Projects from "./pages/Projects"
+import Services from "./pages/Services"
 
 function App() {
  
@@ -7,6 +11,10 @@ function App() {
     <>
       <Navbar/>
       <Home/>
+      <About/>
+      <Projects/>
+      <Services/>
+      <Contact/>
     </>
   
   )
