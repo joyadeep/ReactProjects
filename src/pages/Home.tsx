@@ -9,7 +9,7 @@ type Props = {}
 
 const Home:React.FC = (props: Props) => {
   return (
-    <div className='w-full h-screen px-5 md:px-20 flex  flex-col gap-2 justify-center items-center '>
+    <div className='w-full min-h-screen px-5 md:px-20 flex  flex-col gap-2 justify-center items-center '>
         <div className='flex gap-5'>
             <div className='relative w-20'>
                 <img src={figma} className=' absolute top-10 left-5 animate-rotation2 drop-shadow-xl w-10 h-10' alt="" />
@@ -26,7 +26,7 @@ const Home:React.FC = (props: Props) => {
             <p className='text-2xl font-semibold' >A Frontend Developer with 1+ years of experience</p>
             <p className='text-slate-400'>I am a skilled frontend developer with expertise in crafting intuitive and visually appealing user interfaces. I thrive on creating seamless user experiences through clean code, innovative designs, and a strong attention to detail.</p>
         </div>
-        <button className='rounded-full shadow-xl text-white  bg-gradient-to-r from-blue-500 to-purple-500 bg px-4 py-2 flex items-center gap-2' >See my works <BsArrowDownRight size={14}/></button>
+        <a href='#works' className='rounded-full shadow-xl text-white  bg-gradient-to-r from-blue-500 to-purple-500 bg px-4 py-2 flex items-center gap-2' >See my works <BsArrowDownRight size={14}/></a>
     </div>
   )
 }

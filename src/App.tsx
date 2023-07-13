@@ -1,20 +1,12 @@
-import Navbar from "./components/Navbar"
-import About from "./pages/About"
-import Contact from "./pages/Contact"
-import Home from "./pages/Home"
-import Projects from "./pages/Projects"
-import Services from "./pages/Services"
-
+import Landing from "./pages/Landing"
+import {Routes,Route} from 'react-router-dom'
 function App() {
  
   return (
     <>
-      <Navbar/>
-      <Home/>
-      <About/>
-      <Projects/>
-      <Services/>
-      <Contact/>
+    <Routes>
+      <Route path="/" element={<Landing/>} />
+    </Routes>
     </>
   
   )
