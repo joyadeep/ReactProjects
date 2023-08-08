@@ -1,6 +1,4 @@
-import React, { ReactNode } from 'react'
-import {LuPenTool} from 'react-icons/lu'
-import { IconType } from 'react-icons'
+import React from 'react'
 
 interface IService{
     icon?:JSX.Element;
@@ -13,7 +11,7 @@ const ServiceCard:React.FC<IService> = ({icon,title,description}) => {
     <div className='flex items-center flex-col w-full gap-3'>
         {icon}
         <div className='capitalize text-2xl font-semibold'>{title}</div>
-        <p className='text-slate-400 text-center'>{description}</p>
+        <p className='text-slate-500 text-center'>{description}</p>
     </div>
   )
 }

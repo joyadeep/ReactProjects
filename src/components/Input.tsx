@@ -11,7 +11,7 @@ type Props = {
 
 const Input = ({type,name,value,handleChange,classname}: Props) => {
   return (
-    <input type={type} name={name} value={value} onChange={handleChange} className={twMerge('rounded-md pl-3 py-2 outline-none border border-slate-300 w-full text-lg ',classname)} />
+    <input type={type} required name={name} value={value} onChange={handleChange} className={twMerge('rounded-md pl-3 py-2 outline-none border border-slate-300 w-full text-lg ',classname)} />
   )
 }
 

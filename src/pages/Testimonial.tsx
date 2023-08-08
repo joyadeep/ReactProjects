@@ -94,16 +94,16 @@ const Testimonial = (props: Props) => {
   }
   const handleModal=(e:any)=>{
     setIsOpen(true);
-    document.body.classList.add("overflow-hidden")
+    document.body.classList.add("overflow-y-hidden")
   }
   return (
     <>
      {
         isOpen && 
         createPortal(
-          <div className={`w-full h-screen fixed inset-0  z-20 bg-slate-200/95 flex items-center justify-center`}>
-            <div className='bg-white p-5 rounded-md w-1/2'>
-             <GrClose size={24} className='ml-auto cursor-pointer' onClick={()=>{setIsOpen(false);document.body.classList.remove("overflow-hidden")}} />
+          <div className={`w-full h-screen fixed inset-0  z-20 bg-slate-200/90 flex items-center justify-center`}>
+            <div className={`bg-white p-5 rounded-md w-1/2 animate-modal1 ${isOpen ? 'animate-modal1' : 'animate-modal2'}`}>
+             <GrClose size={24} className='ml-auto cursor-pointer' onClick={()=>{setIsOpen(false);document.body.classList.remove("overflow-y-hidden")}} />
               <form onSubmit={handleClick} className='flex flex-wrap gap-y-3 justify-between'>
                 <div className='w-[49%] flex flex-col'>
                   <Label title='Fullname'/>
@@ -136,9 +136,9 @@ const Testimonial = (props: Props) => {
     <div className=' px-5 md:px-20'>
         <div className=' flex justify-between items-center gap-10'>
             <div className='w-1/4'></div>
-            <h2 className='text-4xl font-bold tracking-tighter capitalize'>What people says</h2>
+            <h2 className='text-4xl font-bold tracking-tighter capitalize'>words of appreciation</h2>
             <div className='w-1/4 text-right'>
-            <Button title='Add' handleClick={handleModal} />
+            <Button title='Add your voice' classname='bg-transparent text-slate-500 hover:bg-transparent p-0 font-medium hover:underline decoration-blue-500 hover:underline-offset-4 hover:text-black' handleClick={handleModal} />
             </div>
         </div>
         {isFetching ? (
