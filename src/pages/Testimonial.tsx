@@ -102,7 +102,7 @@ const Testimonial = (props: Props) => {
         isOpen && 
         createPortal(
           <div className={`w-full h-screen fixed inset-0  z-20 bg-slate-200/90 flex items-center justify-center`}>
-            <div className={`bg-white p-5 rounded-md w-1/2 animate-modal1 ${isOpen ? 'animate-modal1' : 'animate-modal2'}`}>
+            <div className={`bg-white p-5 rounded-md w-11/12 md:w-1/2 animate-modal1 ${isOpen ? 'animate-modal1' : 'animate-modal2'}`}>
              <GrClose size={24} className='ml-auto cursor-pointer' onClick={()=>{setIsOpen(false);document.body.classList.remove("overflow-y-hidden")}} />
               <form onSubmit={handleClick} className='flex flex-wrap gap-y-3 justify-between'>
                 <div className='w-[49%] flex flex-col'>
@@ -145,7 +145,7 @@ const Testimonial = (props: Props) => {
   <div className='text-center text-xl pt-10 text-slate-500'>Fetching</div>
 ) : (
   testimonials.length === 0 ? (
-    <div className='text-center text-xl pt-10 text-slate-500'>Testimonial is empty. Be the first one to add one.</div>
+    <div className='text-center text-xl pt-10 text-slate-500'>Testimonial is empty. Be the first to add one.</div>
   ) : (
     <div className='grid grid-cols-3 gap-3 mt-5'>
       {testimonials.map((testimonial) => (
