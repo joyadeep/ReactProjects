@@ -15,7 +15,9 @@ function App() {
   axiosRetry(axios,{retries:3})
   axios.get("https://portfolio-0osj.onrender.com/").then((res)=>{
     console.log("response from server ==",res)
-    setIsServerReady(true)
+    if(res.status===200){
+      setIsServerReady(true)
+    }
   }).catch((error)=>console.log("error",error))
  },[])
   return (

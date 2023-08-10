@@ -1,4 +1,5 @@
 import React from 'react'
+import AuthHOC from '../shared/AuthHOC'
 
 type Props = {}
 
@@ -8,4 +9,4 @@ const Dashboard = (props: Props) => {
   )
 }
 
-export default Dashboard
+export default AuthHOC(Dashboard);

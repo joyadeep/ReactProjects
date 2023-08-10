@@ -51,11 +51,11 @@ const Testimonial = (props: Props) => {
   };
 
   const handleClick=async(e:any)=>{
+    console.log("clicked")
     e.preventDefault();
     let requestData={};
     setIsLoading(true);
     try {
-      
       if (img){
         const formdata=new FormData();
       formdata.append('file',img)
@@ -125,7 +125,7 @@ const Testimonial = (props: Props) => {
                   <Label title='Message'/>
                   <TextArea classname='w-full' name="message" value={data.message} handleChange={handleDataChange}  />
                 </div>
-                <Button  title='Submit' disabled={isLoading} classname='mx-auto px-10'/>
+                <Button type='submit'  title='Submit' disabled={isLoading} classname='mx-auto px-10'/>
               </form>
             </div>
           </div>
@@ -136,9 +136,9 @@ const Testimonial = (props: Props) => {
     <div className=' px-5 md:px-20'>
         <div className=' flex justify-between items-center gap-10'>
             <div className='w-1/4'></div>
-            <h2 className='text-4xl font-bold tracking-tighter capitalize'>words of appreciation</h2>
+            <h2 className='text-4xl font-bold tracking-tighter capitalize whitespace-nowrap'>words of appreciation</h2>
             <div className='w-1/4 text-right'>
-            <Button title='Add your voice' classname='bg-transparent text-slate-500 hover:bg-transparent p-0 font-medium hover:underline decoration-blue-500 hover:underline-offset-4 hover:text-black' handleClick={handleModal} />
+            <Button title='Add your voice' classname='bg-transparent text-slate-500  hover:bg-transparent p-0 font-medium hover:underline decoration-blue-500 hover:underline-offset-4 hover:text-black' handleClick={handleModal} />
             </div>
         </div>
         {isFetching ? (
@@ -147,7 +147,7 @@ const Testimonial = (props: Props) => {
   testimonials.length === 0 ? (
     <div className='text-center text-xl pt-10 text-slate-500'>Testimonial is empty. Be the first to add one.</div>
   ) : (
-    <div className='grid grid-cols-3 gap-3 mt-5'>
+    <div className='grid grid-cols-2 md:grid-cols-3 gap-3 mt-5'>
       {testimonials.map((testimonial) => (
         <TestimonialCard key={testimonial._id} testimonial={testimonial} />
       ))}

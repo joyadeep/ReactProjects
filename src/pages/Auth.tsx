@@ -2,18 +2,27 @@ import React,{useState} from 'react'
 import Label from '../components/Label'
 import Button from '../components/Button'
 import Input from '../components/Input'
+import {adminLogin} from '../api/authApi'
+import { useNavigate } from 'react-router-dom'
+
 
 
 type Props = {}
 
 const Auth = (props: Props) => {
+    const navigate=useNavigate();
     const [data,setData]=useState({email:'',password:''})
     const handleChange=(e:any)=>{
         setData({...data,[e.target.name]:e.target.value})
     }
-    const handleSubmit=(e:any)=>{
+    const handleSubmit=async(e:any)=>{
         e.preventDefault();
-        console.log("submitted data=",data)
+        const resp=await adminLogin(data);
+        console.log("login response ==",resp)
+        if(resp?.status===200){
+            localStorage.setItem("admin_token",resp.data.token);
+            navigate("/dashboard");
+        }
     }
   return (
     <div className='w-full h-screen flex bg-slate-200 items-center justify-center'>
